@@ -15,7 +15,9 @@
             </div>
             <span class="text-8xl drop-shadow-2xl animate-bounce">🍜</span>
         </div>
-
+        <a href="/" class="text-gray-400 hover:text-white mt-8 mb-4 inline-block transition-colors">
+            ← Kembali ke Beranda
+        </a>
         <h2 class="text-3xl font-bold mb-8 border-l-4 border-red-600 pl-4 uppercase tracking-tighter">Menu Favorit Kami</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
