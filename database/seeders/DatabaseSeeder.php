@@ -15,8 +15,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Memanggil MenuSeeder agar data ramen masuk ke database
+        $this->call([
+            MenuSeeder::class,
+        ]);
 
+        // Kode bawaan untuk membuat user (boleh dibiarkan)
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
