@@ -7,9 +7,6 @@ use Illuminate\Database\Seeder;
 
 class MenuSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
         public function run(): void
     {
         \DB::table('menus')->insert([
@@ -24,7 +21,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Chiken Katsu Kare Rice',
                 'price' => 34000,
-                'description' => 'Chiken Katsu Kare Rice, ayam yang dimasak menggunakan bumbu kari Jepang, dengan potongan kentang dan wortel.',
+                'description' => 'Chicken Katsu Kare Rice, ayam yang dimasak menggunakan bumbu kari Jepang, dengan potongan kentang dan wortel.',
                 'image' => 'chicken_katsu_kare_rice.jpeg',
                 'created_at' => now(),
                 'updated_at' => now(),

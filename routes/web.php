@@ -2,11 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\HomeController;
 
-// Jalur untuk Halaman Beranda (home.blade.php)
-Route::get('/', function () {
-    return view('home'); 
-});
+// Arahkan halaman utama ke HomeController
+Route::get('/', [HomeController::class, 'index']); 
 
 // Jalur untuk Halaman Daftar Menu (menu.blade.php)
 Route::get('/menu', function () {
