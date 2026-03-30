@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\HomeController;
 
-// Arahkan halaman utama ke HomeController
-Route::get('/', [HomeController::class, 'index']); 
+// 1. Halaman Beranda (Home)
+Route::get('/', [HomeController::class, 'index']);
 
-// Jalur untuk Halaman Daftar Menu (menu.blade.php)
-Route::get('/menu', function () {
-    // Mengambil data ramen dari database untuk ditampilkan di halaman menu
-    $menus = DB::table('menus')->get();
-    return view('menu', ['menus' => $menus]);
-});
+// 2. Halaman Daftar Menu (Harus lewat Controller agar datanya muncul)
+Route::get('/menu', [HomeController::class, 'menu']);
+
+// 3. Halaman Statis (Tentang Kami, Blog, Gallery)
+// Pakai Route::view kalau cuma nampilin tampilan simpel tanpa data database
+Route::view('/about', 'about');
+Route::view('/blog', 'blog');
+Route::view('/gallery', 'gallery');
