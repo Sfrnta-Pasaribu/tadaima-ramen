@@ -14,8 +14,16 @@ class HomeController extends Controller
     }
     public function menu()
     {
-        // Mengambil SEMUA data menu dari tabel menu
-        $menus = Menu::all(); 
-        return view('menu', compact('menus'));
+        // Tentukan urutan kategori yang kamu inginkan
+        $priority = ['Ramen', 'Dry Ramen', 'Rice', 'Fried Rice', 'Drinks', 'Snacks', 'Dessert'];
+
+        $groupedMenus = Menu::all()
+            ->groupBy('category')
+            ->sortBy(function ($items, $key) use ($priority) {
+                // Mencari posisi kategori di dalam array priority
+                return array_search($key, $priority);
+            });
+
+        return view('menu', compact('groupedMenus'));
     }
 }
