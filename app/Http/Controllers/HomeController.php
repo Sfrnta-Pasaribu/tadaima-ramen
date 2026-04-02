@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Menu; 
+use App\Models\Menu;
+use App\Models\Gallery; 
 
 class HomeController extends Controller
 {
@@ -25,5 +26,10 @@ class HomeController extends Controller
             });
 
         return view('menu', compact('groupedMenus'));
+    }
+    public function gallery()
+    {
+        $galleries = Gallery::all();
+        return view('gallery', compact('galleries'));
     }
 }

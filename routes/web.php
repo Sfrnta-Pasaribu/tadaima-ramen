@@ -8,6 +8,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 // 2. Halaman Daftar Menu (Harus lewat Controller agar datanya muncul)
 Route::get('/menu', [HomeController::class, 'menu']);
+Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 
 // 3. Halaman Statis (Tentang Kami, Blog, Gallery)
 // Pakai Route::view kalau cuma nampilin tampilan simpel tanpa data database
