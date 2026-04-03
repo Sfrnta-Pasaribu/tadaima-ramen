@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // Memanggil MenuSeeder agar data ramen masuk ke database
         $this->call([
             MenuSeeder::class,
+            GallerySeeder::class,
         ]);
 
         // Kode bawaan untuk membuat user (boleh dibiarkan)

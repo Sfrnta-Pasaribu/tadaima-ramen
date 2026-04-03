@@ -14,4 +14,3 @@ Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 // Pakai Route::view kalau cuma nampilin tampilan simpel tanpa data database
 Route::view('/about', 'about');
 Route::view('/blog', 'blog');
-Route::view('/gallery', 'gallery');
