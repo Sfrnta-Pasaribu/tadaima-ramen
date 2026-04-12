@@ -11,7 +11,8 @@
 
         <div class="relative text-center px-4">
             <span class="text-red-500 font-bold tracking-[0.3em] uppercase mb-4 block">Authentic Japanese Taste</span>
-            <h1 class="text-6xl md:text-8xl font-black text-white italic mb-6">TADAIMA RAMEN</h1>
+            <h1 class="text-5xl md:text-7xl font-black text-white italic mb-5">TADAIMA RAMEN</h1>
+            <h1 class="text-3xl md:text-4xl font-black text-white italic mb-3">ただいまラーメン</h1>
             <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">
                 Menghadirkan kehangatan semangkuk ramen otentik langsung ke meja Anda. Dibuat dengan resep keluarga dan bahan berkualitas tinggi.
             </p>

@@ -4,7 +4,9 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,8 +25,9 @@ class DatabaseSeeder extends Seeder
 
         // Kode bawaan untuk membuat user (boleh dibiarkan)
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Admin Tadaima',
+            'username' => 'tadaima_1', 
+            'password' => Hash::make('ramen123'),
         ]);
     }
 }

@@ -10,9 +10,12 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $signatureMenus = Menu::take(3)->get();
+        // Kita ambil 3 menu saja untuk ditampilkan di halaman depan
+        $signatureMenus = Menu::take(3)->get(); 
+
         return view('home', compact('signatureMenus'));
     }
+
     public function menu()
     {
         // Tentukan urutan kategori yang kamu inginkan
@@ -31,5 +34,14 @@ class HomeController extends Controller
     {
         $galleries = Gallery::all();
         return view('gallery', compact('galleries'));
+    }
+    public function about()
+    {
+        return view('about'); // Pastikan kamu punya file resources/views/about.blade.php
+    }
+
+    public function blog()
+    {
+        return view('blog'); // Pastikan kamu punya file resources/views/blog.blade.php
     }
 }
