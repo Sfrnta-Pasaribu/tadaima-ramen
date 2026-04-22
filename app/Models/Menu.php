@@ -9,6 +9,12 @@ class Menu extends Model
 {
     use HasFactory;
 
-    // Beritahu Laravel kolom mana saja yang boleh diisi (Mass Assignment)
-    protected $fillable = ['name', 'description', 'price', 'image'];
+    // Tambahkan baris ini untuk kolom-kolom di tabel menus kamu
+    protected $fillable = [
+        'name',
+        'description',
+        'price',
+        'category',
+        'image'
+    ];
 }

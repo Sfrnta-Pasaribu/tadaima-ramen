@@ -20,7 +20,7 @@
                             <div class="absolute top-4 right-4 z-10 bg-red-600 text-white font-bold px-4 py-1 rounded-full shadow-lg text-sm">
                                 Rp {{ number_format($menu->price, 0, ',', '.') }}
                             </div>
-                            <img src="{{ asset('images/' . $menu->image) }}" class="h-full w-full object-cover transition-transform group-hover:scale-110">
+                            <img src="{{ asset($menu->image) }}" alt="{{ $menu->name }}" class="h-full w-full object-cover transition-transform group-hover:scale-110">
                         </div>
 
                         <div class="p-8">

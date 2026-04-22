@@ -37,11 +37,11 @@ class HomeController extends Controller
     }
     public function about()
     {
-        return view('about'); // Pastikan kamu punya file resources/views/about.blade.php
+        return view('about'); 
     }
 
-    public function blog()
+    public function facilities()
     {
-        return view('blog'); // Pastikan kamu punya file resources/views/blog.blade.php
+        return view('facilities'); 
     }
 }

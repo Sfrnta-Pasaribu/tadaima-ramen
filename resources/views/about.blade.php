@@ -5,12 +5,12 @@
     
     <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/about-hero.jpg') }}" class="w-full h-full object-cover opacity-40">
+            <img src="{{ asset('images/gallery/suasana_tadaima-ramen.jpeg') }}" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f0f]/60 to-[#0f0f0f]"></div>
         </div>
         
         <div class="relative z-10 text-center px-6">
-            <span class="text-red-600 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Est. 2026</span>
+            <span class="text-red-600 font-bold tracking-[0.3em] uppercase text-sm mb-4 block">Est. 2024</span>
             <h1 class="text-6xl md:text-8xl font-black italic uppercase leading-none">
                 Tadaima <br> <span class="text-red-600">Ramen</span>
             </h1>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="relative group">
                     <div class="absolute -inset-4 border-2 border-red-600/30 rounded-2xl group-hover:border-red-600 transition-colors duration-500"></div>
-                    <img src="{{ asset('images/chef-action.jpg') }}" class="rounded-xl relative z-10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <img src="{{ asset('images/gallery/bagian_depan_tadaima_ramen.jpeg') }}" class="rounded-xl relative z-10 transition-all duration-700">
                 </div>
             </div>
         </div>
@@ -76,28 +76,28 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
                 <div class="group">
                     <div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
-                        <img src="{{ asset('images/team/member1.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <img src="{{ asset('images/team/sofranta.jpeg') }}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h5 class="text-xl font-bold uppercase tracking-widest">Nama Anggota 1</h5>
+                    <h5 class="text-xl font-bold uppercase tracking-widest">Sofranta Pasaribu</h5>
                     <p class="text-red-600 text-xs font-bold mt-2 uppercase tracking-[0.2em]">Project Leader / Backend</p>
                 </div>
 
                 <div class="group">
                     <div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
-                        <img src="{{ asset('images/team/member2.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <img src="{{ asset('images/team/gabriel.jpeg') }}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h5 class="text-xl font-bold uppercase tracking-widest">Nama Anggota 2</h5>
+                    <h5 class="text-xl font-bold uppercase tracking-widest">Gabriel Pangaribuan</h5>
                     <p class="text-red-600 text-xs font-bold mt-2 uppercase tracking-[0.2em]">Frontend Developer</p>
                 </div>
 
                 <div class="group">
                     <div class="relative overflow-hidden rounded-2xl aspect-square mb-6">
-                        <img src="{{ asset('images/team/member3.jpg') }}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105">
+                        <img src="{{ asset('images/team/ruth.jpeg') }}" class="w-full h-full object-cover transition-all duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                    <h5 class="text-xl font-bold uppercase tracking-widest">Nama Anggota 3</h5>
+                    <h5 class="text-xl font-bold uppercase tracking-widest">Ruth Panggabean</h5>
                     <p class="text-red-600 text-xs font-bold mt-2 uppercase tracking-[0.2em]">UI/UX Designer</p>
                 </div>
             </div>
@@ -110,6 +110,5 @@
             Lihat Menu Kami
         </a>
     </section>
-
 </div>
 @endsection
