@@ -30,15 +30,20 @@
                     </div>
 
                     <div class="mb-6">
-                        <label class="block text-gray-700 text-sm font-bold mb-2">Gambar Promo (Opsional)</label>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Gambar Promo (Opsional) | Maximum 2MB</label>
                         <input type="file" name="image" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100">
-                        <p class="text-xs text-gray-500 mt-1">*Disarankan hanya untuk tipe Promosi.</p>
+                        @error('image')
+                            <p class="text-red-600 text-sm font-bold mt-2 flex items-center gap-1">
+                                ⚠️ {{ $message }}
+                            </p>
+                        @enderror
+                        <p class="text-xs text-gray-500 mt-1">*Hanya untuk tipe Promosi.</p>
                     </div>
 
                     <div class="flex items-center justify-between border-t pt-6">
                         <a href="{{ route('dashboard') }}" class="text-gray-600 hover:underline">← Batal</a>
                         <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-8 rounded-lg transition">
-                            Tayangkan Sekarang
+                            Posting Sekarang
                         </button>
                     </div>
                 </form>

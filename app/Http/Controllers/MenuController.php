@@ -10,7 +10,9 @@ class MenuController extends Controller
     // 1. Menampilkan Daftar Menu (Tabel)
     public function index()
     {
-        $menus = Menu::all();
+        // SEKARANG: Ambil data mulai dari yang paling baru (latest)
+        $menus = Menu::latest()->get();
+        
         return view('admin.menu.index', compact('menus'));
     }
 
@@ -29,13 +31,24 @@ class MenuController extends Controller
             'price' => 'required|numeric',
             'description' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+        ], [
+            'image.max' => 'Ukuran gambar terlalu besar! Maksimal hanya 2MB.',
+            'image.image' => 'File yang diunggah harus berupa gambar!',
+            'image.mimes' => 'Format gambar harus jpeg, png, jpg, atau webp.',
+            'name.required' => 'Nama menu wajib diisi.',
+            'category.required' => 'Category menu wajib diisi.',
+            'price.required' => 'Price menu wajib diisi.',
+            'description.required' => 'Description menu wajib diisi.',
         ]);
 
+        $imagePath = null; // Siapkan variabel kosong
+
+        // Proses Upload Foto
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             
-            // Pindah file ke public/images
+            // Pindah file dari komputer admin ke public/images
             $file->move(public_path('images'), $fileName);
             $imagePath = 'images/' . $fileName;
         }
@@ -51,32 +64,51 @@ class MenuController extends Controller
         return redirect()->route('menu.index')->with('success', 'Menu berhasil ditambah!');
     }
 
-    // Fungsi lainnya (edit, update, destroy) bisa kita isi nanti
     public function show(Menu $menu) 
     {
         return view('admin.menu.show', compact('menu'));
     }
+
     public function edit(Menu $menu) 
     {
         return view('admin.menu.edit', compact('menu'));
     }
+
+    // 4. Logika Mengubah Data (Hasil Klik Tombol Update)
     public function update(Request $request, Menu $menu) 
     {
         $request->validate([
-        'name' => 'required',
-        'category' => 'required',
-        'price' => 'required|numeric',
-        'description' => 'required',
-        'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // nullable karena foto boleh tidak diganti
+            'name' => 'required',
+            'category' => 'required',
+            'price' => 'required|numeric',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048', // Boleh kosong jika tidak ganti foto
+        ], [
+            'image.max' => 'Ukuran gambar terlalu besar! Maksimal hanya 2MB.',
+            'image.image' => 'File yang diunggah harus berupa gambar!',
+            'image.mimes' => 'Format gambar harus jpeg, png, jpg, atau webp.',
+            'name.required' => 'Nama menu wajib diisi.',
+            'category.required' => 'Category menu wajib diisi.',
+            'price.required' => 'Price menu wajib diisi.',
+            'description.required' => 'Description menu wajib diisi.',
         ]);
 
         $data = $request->only(['name', 'category', 'price', 'description']);
 
-        // Jika ada upload foto baru
+        // Jika admin mengupload foto baru
         if ($request->hasFile('image')) {
+            
+            // LAKUKAN PEMBERSIHAN: Hapus foto lama yang ada di folder
+            if ($menu->image && file_exists(public_path($menu->image))) {
+                unlink(public_path($menu->image));
+            }
+
+            // UPLOAD FOTO BARU
             $file = $request->file('image');
             $fileName = time() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('images'), $fileName);
+            
+            // Timpa data foto di database dengan yang baru
             $data['image'] = 'images/' . $fileName;
         }
 
@@ -84,6 +116,8 @@ class MenuController extends Controller
 
         return redirect()->route('menu.index')->with('success', 'Menu berhasil diubah!');
     }
+
+    // 5. Logika Menghapus Data
     public function destroy(Menu $menu) 
     {
         // Cek apakah file fotonya ada di folder public/images
@@ -91,8 +125,10 @@ class MenuController extends Controller
             // Hapus file fisiknya supaya folder images tidak penuh sampah
             unlink(public_path($menu->image));
         }
+        
         // Hapus data dari database
         $menu->delete();
+        
         return redirect()->route('menu.index')->with('success', 'Menu berhasil dihapus selamanya!');
     }
 }

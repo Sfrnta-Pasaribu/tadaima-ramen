@@ -19,8 +19,12 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2">Kategori</label>
                     <select name="category" class="w-full border-gray-300 rounded-lg shadow-sm focus:border-red-500 focus:ring-red-500">
                         <option value="Ramen" {{ $menu->category == 'Ramen' ? 'selected' : '' }}>Ramen</option>
-                        <option value="Side Dish" {{ $menu->category == 'Side Dish' ? 'selected' : '' }}>Side Dish</option>
-                        <option value="Drink" {{ $menu->category == 'Drink' ? 'selected' : '' }}>Drink</option>
+                        <option value="Dry Ramen" {{ $menu->category == 'Dry Ramen' ? 'selected' : '' }}>Dry Ramen</option>
+                        <option value="Rice" {{ $menu->category == 'Rice' ? 'selected' : '' }}>Rice</option>
+                        <option value="Fried Rice" {{ $menu->category == 'Fried Rice' ? 'selected' : '' }}>Fried Rice</option>
+                        <option value="Drinks" {{ $menu->category == 'Drinks' ? 'selected' : '' }}>Drink</option>
+                        <option value="Snacks" {{ $menu->category == 'Snacks' ? 'selected' : '' }}>Snack</option>
+                        <option value="Dessert" {{ $menu->category == 'Dessert' ? 'selected' : '' }}>Dessert</option>
                     </select>
                 </div>
 
@@ -39,6 +43,11 @@
                     <img src="{{ asset($menu->image) }}" class="w-32 h-32 object-cover rounded mb-2 shadow">
                     <label class="block text-gray-500 text-xs italic mt-2">Upload foto baru jika ingin mengganti</label>
                     <input type="file" name="image" class="w-full text-sm text-gray-500 mt-2">
+                    @error('image')
+                        <p class="text-red-600 text-sm font-bold mt-2 flex items-center gap-1">
+                            ⚠️ {{ $message }}
+                        </p>
+                    @enderror
                 </div>
 
                 <div class="flex items-center justify-end space-x-3">

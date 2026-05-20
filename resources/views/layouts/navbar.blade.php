@@ -1,4 +1,4 @@
-<nav class="fixed w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+<nav x-data="{ open: false }" class="fixed w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
     <div class="container mx-auto px-6 py-6 flex justify-between items-center">
         <div class="text-white text-2xl font-black italic tracking-tighter">
             TADAIMA-RAMEN<span class="text-red-500">.</span>
@@ -28,7 +28,7 @@
         <a href="/" class="block text-white font-bold hover:text-red-500">Home</a>
         <a href="/menu" class="block text-white font-bold hover:text-red-500">Menu</a>
         <a href="/about" class="block text-white font-bold hover:text-red-500">About Us</a>
-        <a href="/facilities" class="hover:text-red-500 transition text-white">Fasilitas</a>
+        <a href="/facilities" class="block text-white font-bold hover:text-red-500">Fasilitas</a>
         <a href="/gallery" class="block text-white font-bold hover:text-red-500">Gallery</a>
     </div>
 </nav>

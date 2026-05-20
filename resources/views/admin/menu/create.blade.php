@@ -21,9 +21,12 @@
                             <label class="block text-gray-700 text-sm font-bold mb-2">Kategori</label>
                             <select name="category" class="w-full border-gray-300 rounded-md shadow-sm">
                                 <option value="Ramen">Ramen</option>
+                                <option value="Dry Ramen">Dry Ramen</option>
                                 <option value="Rice">Rice</option>
-                                <option value="Side Dish">Side Dish</option>
-                                <option value="Drink">Drink</option>
+                                <option value="Fried Rice">Fried Rice</option>
+                                <option value="Snacks">Snack</option>
+                                <option value="Drinks">Drink</option>
+                                <option value="Dessert">Dessert</option>
                             </select>
                         </div>
                         <div>
@@ -38,8 +41,13 @@
                     </div>
 
                     <div class="mb-8">
-                        <label class="block text-gray-700 text-sm font-bold mb-2">Foto Menu</label>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Foto Menu | Maximum 2MB</label>
                         <input type="file" name="image" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100" required>
+                        @error('image')
+                            <p class="text-red-600 text-sm font-bold mt-2 flex items-center gap-1">
+                                ⚠️ {{ $message }}
+                            </p>
+                        @enderror
                     </div>
 
                     <div class="flex items-center justify-between border-t pt-6">

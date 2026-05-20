@@ -22,32 +22,64 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            <nav class="fixed w-full z-50 bg-zinc-950/90 backdrop-blur-sm border-zinc-800">
+            
+            <nav x-data="{ open: false }" class="fixed w-full z-50 bg-transparent">
                 <div class="container mx-auto px-6 py-4">
                     <div class="flex items-center justify-between">
-                        <a href="/" class="text-2xl font-black italic tracking-tighter text-white">
+                        
+                        <a href="/" class="text-2xl font-black italic tracking-tighter text-white drop-shadow-md">
                             TADAIMA-RAMEN<span class="text-red-600">.</span>
                         </a>
 
-                        <div class="hidden md:flex items-center justify-center flex-1 gap-10 text-xs font-bold uppercase tracking-[0.2em] text-gray-300">
-                            <a href="{{ route('home') }}" class="hover:text-red-600 transition">Beranda</a>
-                            <a href="{{ route('menu') }}" class="hover:text-red-600 transition">Menu</a>
-                            <a href="/about" class="hover:text-red-600 transition">About</a>
-                            <a href="/gallery" class="hover:text-red-600 transition">Gallery</a>
-                            <a href="/facilities" class="hover:text-red-600 transition">Fasilitas</a>
+                        <div class="hidden md:flex items-center justify-center flex-1 gap-10 text-xs font-bold uppercase tracking-[0.2em] text-gray-100">
+                            <a href="{{ route('home') }}" class="hover:text-white transition drop-shadow-md">Beranda</a>
+                            <a href="{{ route('menu') }}" class="hover:text-white transition drop-shadow-md">Menu</a>
+                            <a href="/about" class="hover:text-white transition drop-shadow-md">About</a>
+                            <a href="/gallery" class="hover:text-white transition drop-shadow-md">Gallery</a>
+                            <a href="/facilities" class="hover:text-white transition drop-shadow-md">Fasilitas</a>
                         </div>
 
                         <div class="flex items-center space-x-4">
-                            @auth
-                                <a href="{{ route('dashboard') }}" class="text-[10px] font-bold uppercase tracking-widest text-red-600 border border-red-600 px-3 py-1 rounded-full hover:bg-red-600 hover:text-white transition">Dashboard</a>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-white">Logout</button>
-                                </form>
-                            @else
-                                <a href="{{ route('login') }}" class="text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 px-5 py-2 rounded-full hover:bg-red-700 transition">Login</a>
-                            @endauth
+                            
+                            <div class="hidden md:flex items-center space-x-4">
+                                @auth
+                                    <a href="{{ route('dashboard') }}" class="text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition drop-shadow-md">Dashboard</a>
+                                    <form method="POST" action="{{ route('logout') }}" class="inline">
+                                        @csrf
+                                        <button type="submit" class="text-[10px] font-bold uppercase tracking-widest text-gray-200 hover:text-white drop-shadow-md">Logout</button>
+                                    </form>
+                                @else
+                                    <a href="{{ route('login') }}" class="text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 px-5 py-2 rounded-full hover:bg-red-700 transition shadow-md">Login</a>
+                                @endauth
+                            </div>
+
+                            <button @click="open = !open" class="md:hidden text-white focus:outline-none drop-shadow-md">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                                </svg>
+                            </button>
+                            
                         </div>
+                    </div>
+                </div>
+
+                <div x-show="open" x-transition class="md:hidden bg-black/95 absolute top-full left-0 w-full p-6 space-y-4 text-center border-t border-white/10 shadow-2xl">
+                    <a href="{{ route('home') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Beranda</a>
+                    <a href="{{ route('menu') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Menu</a>
+                    <a href="/about" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">About</a>
+                    <a href="/gallery" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Gallery</a>
+                    <a href="/facilities" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Fasilitas</a>
+                    
+                    <div class="pt-6 mt-4 border-t border-white/20">
+                        @auth
+                            <a href="{{ route('dashboard') }}" class="inline-block text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500 px-6 py-2 rounded-full hover:bg-red-500 hover:text-white transition mb-4">Dashboard</a>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit" class="block w-full text-gray-400 font-bold hover:text-white uppercase tracking-[0.2em] text-xs">Logout</button>
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}" class="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 px-8 py-3 rounded-full hover:bg-red-700 transition shadow-md">Login</a>
+                        @endauth
                     </div>
                 </div>
             </nav>

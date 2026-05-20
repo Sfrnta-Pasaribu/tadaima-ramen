@@ -10,7 +10,7 @@
         </div>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 min-h-[60vh]">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
                 <table class="w-full text-left">
@@ -33,10 +33,10 @@
                             <td class="py-3 px-4 font-bold">{{ $item->title }}</td>
                             <td class="py-3 px-4 text-sm text-gray-600">{{ Str::limit($item->content, 50) }}</td>
                             <td class="py-3 px-4 text-center">
-                                <form action="{{ route('announcement.destroy', $item->id) }}" method="POST" onsubmit="return confirm('Hapus pengumuman ini?')">
+                                <form action="{{ route('announcement.destroy', $item->id) }}" method="POST" class="inline-block" onsubmit="return confirm('Apakah kamu yakin ingin menghapus pengumuman ini?');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="text-red-600 hover:underline">Hapus</button>
+                                    <button type="submit" class="text-red-600 hover:text-red-800">Hapus</button>
                                 </form>
                             </td>
                         </tr>

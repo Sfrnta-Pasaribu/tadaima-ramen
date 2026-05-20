@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Menu;
 use App\Models\Gallery; 
+use App\Models\Announcement; 
 
 class HomeController extends Controller
 {
@@ -13,7 +14,11 @@ class HomeController extends Controller
         // Kita ambil 3 menu saja untuk ditampilkan di halaman depan
         $signatureMenus = Menu::take(3)->get(); 
 
-        return view('home', compact('signatureMenus'));
+        // 2. TAMBAHAN BARU: Ambil data pengumuman/promo dari yang terbaru
+        $announcements = Announcement::latest()->get(); 
+
+        // 3. Jangan lupa masukkan 'announcements' ke dalam compact agar terkirim ke view
+        return view('home', compact('signatureMenus', 'announcements'));
     }
 
     public function menu()
@@ -30,11 +35,13 @@ class HomeController extends Controller
 
         return view('menu', compact('groupedMenus'));
     }
+
     public function gallery()
     {
         $galleries = Gallery::all();
         return view('gallery', compact('galleries'));
     }
+
     public function about()
     {
         return view('about'); 
