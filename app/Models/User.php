@@ -12,6 +12,13 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
+     * Mendefinisikan nama tabel secara manual (menggantikan bawaan 'users').
+     *
+     * @var string
+     */
+    protected $table = 'admin';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var list<string>
@@ -40,7 +47,7 @@ class User extends Authenticatable
     protected function casts(): array
     {
         return [
-            'email_verified_at' => 'datetime',
+            // Baris email_verified_at sudah dihapus karena tidak diperlukan lagi
             'password' => 'hashed',
         ];
     }

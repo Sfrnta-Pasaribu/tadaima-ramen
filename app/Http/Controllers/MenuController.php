@@ -54,6 +54,7 @@ class MenuController extends Controller
         }
 
         Menu::create([
+            'admin_id' => auth()->id(),
             'name' => $request->name,
             'category' => $request->category,
             'price' => $request->price,

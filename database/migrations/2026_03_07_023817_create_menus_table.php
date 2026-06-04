@@ -18,6 +18,7 @@ return new class extends Migration
         $table->text('description');    // Penjelasan singkat menu
         $table->string('image')->nullable(); // Link gambar (opsional)
         $table->timestamps();           // Mencatat waktu dibuat/diubah
+        $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
     });
 }
 

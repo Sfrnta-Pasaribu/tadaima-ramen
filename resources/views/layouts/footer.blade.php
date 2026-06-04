@@ -28,9 +28,6 @@
                         <span class="uppercase tracking-widest text-xs bg-red-600/10 px-2 py-1 rounded">Tutup</span>
                     </li>
                 </ul>
-                <p class="mt-6 text-[10px] text-gray-500 italic leading-relaxed">
-                    *Last order dilakukan 30 menit sebelum jam tutup kedai.
-                </p>
             </div>
 
             <div>

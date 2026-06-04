@@ -11,6 +11,7 @@ class Menu extends Model
 
     // Tambahkan baris ini untuk kolom-kolom di tabel menus kamu
     protected $fillable = [
+        'admin_id',
         'name',
         'description',
         'price',

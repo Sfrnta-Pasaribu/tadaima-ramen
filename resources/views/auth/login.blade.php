@@ -13,12 +13,21 @@
             <form method="POST" action="{{ route('login') }}" class="space-y-6">
                 @csrf
 
+                @if ($errors->any())
+                    <div class="bg-red-950/30 border border-red-600/40 text-red-400 p-4 rounded-xl flex items-start gap-3 shadow-lg shadow-red-950/50 backdrop-blur-sm">
+                        <span class="text-sm leading-none mt-0.5">⚠️</span>
+                        <div>
+                            <p class="text-[10px] text-red-500 uppercase tracking-[0.2em] font-black mb-1">Akses Ditolak</p>
+                            <p class="text-xs font-medium text-zinc-400 leading-relaxed">Username atau password salah. Silakan periksa kembali data login Anda.</p>
+                        </div>
+                    </div>
+                @endif
+
                 <div>
                     <label class="block text-[10px] font-black uppercase tracking-[0.2em] text-white mb-2">Admin Username</label>
                     <input type="text" name="username" :value="old('username')" required autofocus
                         class="w-full bg-gray-100 border-transparent text-zinc-900 rounded-xl focus:bg-white focus:ring-2 focus:ring-red-600 focus:border-red-600 transition-all p-3.5 text-sm font-medium"
-                        placeholder="tadaima_1">
-                    <x-input-error :messages="$errors->get('username')" class="mt-2 text-[10px] text-red-500 font-bold" />
+                        placeholder="tadaima">
                 </div>
 
                 <div>
@@ -26,7 +35,6 @@
                     <input type="password" name="password" required autocomplete="current-password"
                         class="w-full bg-gray-100 border-transparent text-zinc-900 rounded-xl focus:bg-white focus:ring-2 focus:ring-red-600 focus:border-red-600 transition-all p-3.5 text-sm font-medium"
                         placeholder="••••••••">
-                    <x-input-error :messages="$errors->get('password')" class="mt-2 text-[10px] text-red-500 font-bold" />
                 </div>
 
                 <div class="flex items-center pt-2">

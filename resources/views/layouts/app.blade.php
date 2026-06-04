@@ -36,7 +36,7 @@
                             <a href="{{ route('menu') }}" class="hover:text-white transition drop-shadow-md">Menu</a>
                             <a href="/about" class="hover:text-white transition drop-shadow-md">About</a>
                             <a href="/gallery" class="hover:text-white transition drop-shadow-md">Gallery</a>
-                            <a href="/facilities" class="hover:text-white transition drop-shadow-md">Fasilitas</a>
+                            <a href="{{ route('fasilitas') }}" class="hover:text-white transition drop-shadow-md">Fasilitas</a>
                         </div>
 
                         <div class="flex items-center space-x-4">
@@ -68,7 +68,7 @@
                     <a href="{{ route('menu') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Menu</a>
                     <a href="/about" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">About</a>
                     <a href="/gallery" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Gallery</a>
-                    <a href="/facilities" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Fasilitas</a>
+                    <a href="{{ route('fasilitas') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Fasilitas</a>
                     
                     <div class="pt-6 mt-4 border-t border-white/20">
                         @auth

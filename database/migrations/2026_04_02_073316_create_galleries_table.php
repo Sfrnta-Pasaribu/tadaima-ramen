@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('image');           // Nama file gambar
             $table->string('type')->default('ambiance'); // Kategori (misal: food, ambiance, event)
             $table->timestamps();
+            $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
         });
     }
 

@@ -2,9 +2,18 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Gallery extends Model
 {
-    protected $fillable = ['title', 'image', 'type'];
+    use HasFactory;
+
+    // 👇 Beri izin pada kolom-kolom ini
+    protected $fillable = [
+        'admin_id',
+        'title',
+        'image',
+        'type'
+    ];
 }

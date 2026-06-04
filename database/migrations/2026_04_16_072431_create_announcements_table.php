@@ -19,6 +19,7 @@ return new class extends Migration
             $table->enum('type', ['promo', 'info'])->default('info');
             $table->boolean('is_active')->default(true);
             $table->timestamps();
+            $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
         });
     }
 

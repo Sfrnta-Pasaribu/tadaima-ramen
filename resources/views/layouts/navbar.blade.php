@@ -8,7 +8,7 @@
             <a href="/" class="hover:text-red-500 transition text-white">Home</a>
             <a href="/menu" class="hover:text-red-500 transition text-white">Menu</a>
             <a href="/about" class="hover:text-red-500 transition text-white">About</a>
-            <a href="/facilities" class="hover:text-red-500 transition text-white">Fasilitas</a>
+            <a href="{{ route('fasilitas') }}" class="hover:text-red-500 transition text-white">Fasilitas</a>
             <a href="/gallery" class="hover:text-red-500 transition text-white">Gallery</a>
         </div>
 
@@ -28,7 +28,7 @@
         <a href="/" class="block text-white font-bold hover:text-red-500">Home</a>
         <a href="/menu" class="block text-white font-bold hover:text-red-500">Menu</a>
         <a href="/about" class="block text-white font-bold hover:text-red-500">About Us</a>
-        <a href="/facilities" class="block text-white font-bold hover:text-red-500">Fasilitas</a>
+        <a href="{{ route('fasilitas') }}" class="block text-white font-bold hover:text-red-500">Fasilitas</a>
         <a href="/gallery" class="block text-white font-bold hover:text-red-500">Gallery</a>
     </div>
 </nav>

@@ -24,36 +24,30 @@ class AnnouncementController extends Controller
     // 3. Menyimpan Pengumuman Baru (Termasuk Upload Gambar)
     public function store(Request $request)
     {
-        $request->validate([
-            'type' => 'required',
-            'title' => 'required',
-            'content' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
-        ], [
-            'image.max' => 'Ukuran gambar terlalu besar! Maksimal hanya 2MB.',
-            'image.image' => 'File yang diunggah harus berupa gambar!',
-            'image.mimes' => 'Format gambar harus jpeg, png, jpg, atau webp.',
-            'type.required' => 'Tipe pengumuman wajib diisi.',
-            'title.required' => 'Judul pengumuman wajib diisi.',
-            'content.required' => 'Isi pengumuman wajib diisi.',
+        // 1. Validasi data (pastikan image dibuat 'nullable')
+        $data = $request->validate([
+            'type'    => 'required|in:pengumuman,promo',
+            'title'   => 'required|string|max:255',
+            'content' => 'required|string',
+            'image'   => 'nullable|image|mimes:jpeg,png,jpg|max:2048', 
         ]);
 
-        $data = $request->only(['type', 'title', 'content']);
-        $data['image'] = null; // Nilai default jika tidak ada gambar
-
+        // 2. Logika Pengecekan Gambar
         if ($request->hasFile('image')) {
             $file = $request->file('image');
-            
-            // Menggunakan gabungan time() dan uniqid() agar nama file tidak bentrok dan terhindar dari cache browser
-            $fileName = time() . '_' . uniqid() . '.' . $file->getClientOriginalExtension();
-            
-            // Pindahkan file ke folder public/images
+            $fileName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('images/pengumuman'), $fileName);
             
-            // Simpan format path ke database
+            // Simpan format path ke database jika gambar ada
             $data['image'] = 'images/pengumuman/' . $fileName;
+        } else {
+            $data['image'] = null; 
         }
 
+        // Ambil ID Admin yang sedang login dan masukkan ke dalam array data
+        $data['admin_id'] = auth()->id();
+
+        // 4. Simpan ke database
         Announcement::create($data);
 
         return redirect()->route('announcement.index')->with('success', 'Pengumuman berhasil ditambahkan!');
