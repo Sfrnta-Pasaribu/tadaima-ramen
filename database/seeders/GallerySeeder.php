@@ -11,34 +11,40 @@ class GallerySeeder extends Seeder
     {
         $photos = [
             [
-                'title' => 'Bagian Depan Tadaima Ramen', 
-                'image' => 'bagian_depan_tadaima_ramen.jpeg', 
-                'type' => 'ambiance'
+                'title' => 'Tampak Depan Tadaima Ramen', 
+                'image' => 'images/gallery/1780408980_bagian_depan_tadaima_ramen.jpeg', 
+                'type' => 'ambiance',
+                'admin_id' => 1
             ],
             [
                 'title' => 'Suasana Malam Tadaima', 
-                'image' => 'suasana_tadaima-ramen.jpeg', 
-                'type' => 'ambiance'
+                'image' => 'images/gallery/1780409376_suasana_tadaima-ramen.jpeg', 
+                'type' => 'ambiance',
+                'admin_id' => 1
             ],
             [
-                'title' => 'Pelanggan Setia', 
-                'image' => 'pelanggan1.jpeg', 
-                'type' => 'customer'
+                'title' => 'Kumpul Seru Bareng Bestie', 
+                'image' => 'images/gallery/1780409495_pelanggan1.jpeg', 
+                'type' => 'customer',
+                'admin_id' => 1
             ],
             [
-                'title' => 'Pelanggan Setia', 
-                'image' => 'pelanggan2.jpeg', 
-                'type' => 'customer'
+                'title' => 'Momen Hangat Lintas Generasi', 
+                'image' => 'images/gallery/1780409522_pelanggan2.jpeg', 
+                'type' => 'customer',
+                'admin_id' => 1
             ],
             [
-                'title' => 'Pelanggan Setia', 
-                'image' => 'pelanggan3.jpeg', 
-                'type' => 'customer'
+                'title' => 'Kompak Seru: Itadakimasu!', 
+                'image' => 'images/gallery/1780409569_pelanggan3.jpeg', 
+                'type' => 'customer',
+                'admin_id' => 1
             ],
             [
-                'title' => 'Pelanggan Setia', 
-                'image' => 'pelanggan4.jpeg', 
-                'type' => 'customer'
+                'title' => 'Cerita Manis di Sudut jendela', 
+                'image' => 'images/gallery/1780409676_pelanggan4.jpeg', 
+                'type' => 'customer',
+                'admin_id' => 1
             ],
         ];
 

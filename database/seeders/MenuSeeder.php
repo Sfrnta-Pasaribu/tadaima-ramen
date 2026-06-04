@@ -19,6 +19,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Chiken Katsu Kare Rice',
@@ -28,6 +29,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Tadaima Fried Rice',
@@ -37,6 +39,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Fried Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Seafood Fried Rice',
@@ -46,6 +49,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Fried Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Karegayaki Rice',
@@ -55,6 +59,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Chicken Fried Rice',
@@ -64,6 +69,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Fried Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Egg Fried Rice',
@@ -73,6 +79,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Fried Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Hokkaido Miso Ramen',
@@ -82,6 +89,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Kampung Style Fried Rice',
@@ -91,6 +99,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Fried Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Karage Dry Ramen',
@@ -100,6 +109,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dry Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Kare Dry Ramen',
@@ -109,6 +119,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dry Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Katsu Dry Ramen',
@@ -118,6 +129,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dry Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Seafood Kare Rice',
@@ -127,6 +139,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Tadaima Chicken Rice',
@@ -136,6 +149,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Rice',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Tori Paitan Ramen',
@@ -145,6 +159,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Ramen',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Fried Mantao',
@@ -154,6 +169,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'French fries',
@@ -163,6 +179,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Prawn Tempura',
@@ -172,6 +189,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => '2 Scoop Vanilla Ice Cream',
@@ -181,6 +199,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dessert',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Fried Banana Choco Rice',
@@ -190,6 +209,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dessert',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Grill Banana Cheese',
@@ -199,6 +219,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dessert',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Banana Split',
@@ -208,6 +229,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Dessert',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Sauted Broccoli',
@@ -217,6 +239,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Karage',
@@ -226,6 +249,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Broccoli Tempura',
@@ -235,6 +259,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Onigiri',
@@ -244,6 +269,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Chicken Katsu',
@@ -253,6 +279,7 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
                 'name' => 'Onion Ring',
@@ -262,60 +289,67 @@ class MenuSeeder extends Seeder
                 'category' => 'Snacks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Cappuccino',
+                'name' => 'Hot Cappuccino',
                 'price' => 20000,
                 'description' => 'Kopi espresso kustom dengan susu steamed lembut dan sentuhan latte art cantik yang menghangatkan suasana.',
-                'image' => 'images/cappuccino.jpeg',
+                'image' => 'images/1780580109.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Fresh Orange Juice',
+                'name' => 'Orange Juice',
                 'price' => 18000,
                 'description' => 'Sari jeruk murni pilihan yang diperas langsung tanpa tambahan pemanis buatan untuk rasa manis-asam alami yang sehat dan menyegarkan.',
-                'image' => 'images/fresh_orange_juice.jpeg',
+                'image' => 'images/1780580132.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Iced Matcha Strawberry Latte',
+                'name' => 'Iced Strawberry Matcha Latte',
                 'price' => 28000,
                 'description' => 'Perpaduan estetik matcha premium Jepang, susu segar, dan lapisan stroberi manis di bagian bawah yang menyegarkan mata dan lidah.',
-                'image' => 'images/iced_matcha_strawberry_latte.jpeg',
+                'image' => 'images/1780580154.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Japanese Greentea',
+                'name' => 'Hot Ocha Tea',
                 'price' => 10000,
                 'description' => 'Teh hijau Jepang asli disajikan hangat yang menenangkan dan menjadi pendamping sempurna saat menikmati ramen.',
-                'image' => 'images/japanese_greentea.jpeg',
+                'image' => 'images/Hot_Ocha_Tea.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Lemongrass Berry Fusion',
+                'name' => 'Narara',
                 'price' => 25000,
                 'description' => 'Kesegaran ganda dari campuran beri manis dan aroma serai autentik dalam sajian dingin yang membangkitkan semangat.',
-                'image' => 'images/lemongrass_berry_fusion.jpeg',
+                'image' => 'images/narara.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
             [
-                'name' => 'Matcha Creamy Shake',
+                'name' => 'Matcha Milkshake',
                 'price' => 30000,
                 'description' => 'Smoothie kental dari bubuk matcha premium pilihan yang di-blend lembut untuk pencinta rasa teh hijau yang bold dan creamy.',
-                'image' => 'images/matcha_creamy_shake.jpeg',
+                'image' => 'images/1780580177.jpeg',
                 'category' => 'Drinks',
                 'created_at' => now(),
                 'updated_at' => now(),
+                'admin_id' => 1,
             ],
         ]);
     }
