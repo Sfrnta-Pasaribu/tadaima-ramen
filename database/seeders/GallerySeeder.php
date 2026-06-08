@@ -25,25 +25,25 @@ class GallerySeeder extends Seeder
             [
                 'title' => 'Kumpul Seru Bareng Bestie', 
                 'image' => 'images/gallery/1780409495_pelanggan1.jpeg', 
-                'type' => 'customer',
+                'type' => 'customers',
                 'admin_id' => 1
             ],
             [
                 'title' => 'Momen Hangat Lintas Generasi', 
                 'image' => 'images/gallery/1780409522_pelanggan2.jpeg', 
-                'type' => 'customer',
+                'type' => 'customers',
                 'admin_id' => 1
             ],
             [
                 'title' => 'Kompak Seru: Itadakimasu!', 
                 'image' => 'images/gallery/1780409569_pelanggan3.jpeg', 
-                'type' => 'customer',
+                'type' => 'customers',
                 'admin_id' => 1
             ],
             [
                 'title' => 'Cerita Manis di Sudut jendela', 
                 'image' => 'images/gallery/1780409676_pelanggan4.jpeg', 
-                'type' => 'customer',
+                'type' => 'customers',
                 'admin_id' => 1
             ],
         ];

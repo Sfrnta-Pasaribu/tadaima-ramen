@@ -27,16 +27,16 @@
                 <div class="container mx-auto px-6 py-4">
                     <div class="flex items-center justify-between">
                         
-                        <a href="/" class="text-2xl font-black italic tracking-tighter text-white drop-shadow-md">
-                            TADAIMA-RAMEN<span class="text-red-600">.</span>
+                        <a href="/" class="text-2xl font-black italic tracking-tighter text-red-600 drop-shadow-md">
+                            TADAIMA-RAMEN<span class="text-white">.</span>
                         </a>
 
-                        <div class="hidden md:flex items-center justify-center flex-1 gap-10 text-xs font-bold uppercase tracking-[0.2em] text-gray-100">
-                            <a href="{{ route('home') }}" class="hover:text-white transition drop-shadow-md">Beranda</a>
-                            <a href="{{ route('menu') }}" class="hover:text-white transition drop-shadow-md">Menu</a>
-                            <a href="/about" class="hover:text-white transition drop-shadow-md">About</a>
-                            <a href="/gallery" class="hover:text-white transition drop-shadow-md">Gallery</a>
-                            <a href="{{ route('fasilitas') }}" class="hover:text-white transition drop-shadow-md">Fasilitas</a>
+                        <div class="hidden md:flex items-center justify-center flex-1 gap-10 text-xs font-bold uppercase tracking-[0.2em]">
+                            <a href="{{ route('home') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('home') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Beranda</a>
+                            <a href="{{ route('menu') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('menu') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Menu</a>
+                            <a href="/about" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('about') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">About</a>
+                            <a href="/gallery" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('gallery') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Gallery</a>
+                            <a href="{{ route('fasilitas') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('fasilitas') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Fasilitas</a>
                         </div>
 
                         <div class="flex items-center space-x-4">
@@ -46,7 +46,7 @@
                                     <a href="{{ route('dashboard') }}" class="text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition drop-shadow-md">Dashboard</a>
                                     <form method="POST" action="{{ route('logout') }}" class="inline">
                                         @csrf
-                                        <button type="submit" class="text-[10px] font-bold uppercase tracking-widest text-gray-200 hover:text-white drop-shadow-md">Logout</button>
+                                        <button type="submit" class="text-[10px] font-bold uppercase tracking-widest text-gray-200 hover:text-red-600 drop-shadow-md">Logout</button>
                                     </form>
                                 @else
                                     <a href="{{ route('login') }}" class="text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 px-5 py-2 rounded-full hover:bg-red-700 transition shadow-md">Login</a>
@@ -64,11 +64,11 @@
                 </div>
 
                 <div x-show="open" x-transition class="md:hidden bg-black/95 absolute top-full left-0 w-full p-6 space-y-4 text-center border-t border-white/10 shadow-2xl">
-                    <a href="{{ route('home') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Beranda</a>
-                    <a href="{{ route('menu') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Menu</a>
-                    <a href="/about" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">About</a>
-                    <a href="/gallery" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Gallery</a>
-                    <a href="{{ route('fasilitas') }}" class="block text-gray-200 font-bold hover:text-white tracking-[0.2em] uppercase text-sm">Fasilitas</a>
+                    <a href="{{ route('home') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('home') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Beranda</a>
+                    <a href="{{ route('menu') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('menu') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Menu</a>
+                    <a href="/about" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('about') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">About</a>
+                    <a href="/gallery" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('gallery') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Gallery</a>
+                    <a href="{{ route('fasilitas') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('fasilitas') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Fasilitas</a>
                     
                     <div class="pt-6 mt-4 border-t border-white/20">
                         @auth

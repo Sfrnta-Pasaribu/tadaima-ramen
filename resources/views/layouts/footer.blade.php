@@ -50,7 +50,7 @@
             <div>
                 <h4 class="text-lg font-bold mb-6 italic border-l-4 border-red-600 pl-4">Hubungi Kami</h4>
                 <p class="text-gray-400 text-sm mb-6">Punya pertanyaan atau ingin reservasi tempat?</p>
-                <a href="https://wa.me/081396537191" target="_blank" class="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-green-900/20 transform hover:-translate-y-1">
+                <a href="https://wa.me/6281396537191" target="_blank" class="inline-block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-green-900/20 transform hover:-translate-y-1">
                     WhatsApp Kami
                 </a>
             </div>

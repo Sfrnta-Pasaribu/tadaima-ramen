@@ -47,10 +47,18 @@ class ProfileController extends Controller
             'password' => ['required', 'current_password'],
         ]);
 
+        // 1. Cek jumlah akun admin
+        $adminCount = \App\Models\User::count(); 
+
+        // 2. Proteksi jika hanya tersisa 1 admin
+        if ($adminCount <= 1) {
+            // Kirim error ke bag 'userDeletion'
+            return back()->withErrors(['password' => 'Tidak bisa menghapus akun: Anda adalah satu-satunya admin yang tersisa.'], 'userDeletion');
+        }
+
         $user = $request->user();
 
         Auth::logout();
-
         $user->delete();
 
         $request->session()->invalidate();

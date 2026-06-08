@@ -4,14 +4,25 @@
 
 @section('content')
 
+    @php
+        $hasInfo = false;
+        if(isset($announcements)) {
+            foreach($announcements as $info) {
+                if(Str::contains(strtolower($info->type), 'info') || Str::contains(strtolower($info->type), 'jadwal')) {
+                    $hasInfo = true;
+                    break;
+                }
+            }
+        }
+    @endphp
+
+    @if($hasInfo)
     <div class="fixed left-0 w-full flex items-center overflow-hidden" style="bottom: 0px; z-index: 9999; background-color: #111827; box-shadow: 0 -10px 25px -5px rgba(0, 0, 0, 0.3);">
         
-        <!-- Label Statis di Kiri -->
         <div class="text-white text-xs md:text-sm font-black px-5 py-3 md:px-8 md:py-4 uppercase tracking-[0.2em] whitespace-nowrap z-10" style="background-color: #b91c1c; box-shadow: 5px 0 15px -3px rgba(0,0,0,0.8);">
             INFO TERKINI
         </div>
         
-        <!-- Teks Berjalan di Kanan -->
         <marquee behavior="scroll" direction="left" scrollamount="6" class="text-sm font-medium w-full pt-1 tracking-wide">
             @foreach($announcements as $info)
                 @if(Str::contains(strtolower($info->type), 'info') || Str::contains(strtolower($info->type), 'jadwal'))
@@ -25,6 +36,7 @@
             @endforeach
         </marquee>
     </div>
+    @endif
 
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
 
@@ -43,7 +55,6 @@
         </div>
     </section>
 
-    <!-- AREA PROMO: KHUSUS PROMO BERGAMBAR -->
     <section class="py-24 bg-zinc-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
@@ -70,7 +81,6 @@
         </div>
     </section>
 
-    <!-- AREA SIGNATURE MENU -->
     <section class="py-24 bg-white">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16">

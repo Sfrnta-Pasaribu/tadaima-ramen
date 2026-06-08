@@ -5,7 +5,7 @@
     
     <section class="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <img src="{{ asset('images/gallery/suasana_tadaima-ramen.jpeg') }}" class="w-full h-full object-cover opacity-40">
+            <img src="{{ asset('images/suasana_tadaima-ramen.jpeg') }}" class="w-full h-full object-cover opacity-40">
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0f0f0f]/60 to-[#0f0f0f]"></div>
         </div>
         
@@ -41,7 +41,7 @@
                 </div>
                 <div class="relative group order-1 md:order-2">
                     <div class="absolute -inset-4 border-2 border-red-600/30 rounded-2xl group-hover:border-red-600 transition-colors duration-500"></div>
-                    <img src="{{ asset('images/gallery/bagian_depan_tadaima_ramen.jpeg') }}" class="rounded-xl relative z-10 transition-all duration-700 shadow-2xl">
+                    <img src="{{ asset('images/gallery/1780408980_bagian_depan_tadaima_ramen.jpeg') }}" class="rounded-xl relative z-10 transition-all duration-700 shadow-2xl">
                 </div>
             </div>
         </div>
