@@ -46,7 +46,7 @@
         </div>
 
         <div class="relative text-center px-4">
-            <span class="text-red-500 font-bold tracking-[0.3em] uppercase mb-4 block">Authentic Japanese Taste</span>
+            <span class="text-red-500 font-bold tracking-[0.3em] uppercase mb-4 block">CITA RASA JEPANG OTENTIK</span>
             <h1 class="text-5xl md:text-7xl font-black text-white italic mb-5">TADAIMA RAMEN</h1>
             <h1 class="text-3xl md:text-4xl font-black text-white italic mb-3">ただいまラーメン</h1>
             <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-10 leading-relaxed">

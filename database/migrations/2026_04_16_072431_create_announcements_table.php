@@ -11,21 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('announcements', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->text('content'); // Pastikan tulisannya benar 'content'
-            $table->string('image')->nullable(); // Tambahkan di sini
-            $table->enum('type', ['promo', 'info'])->default('info');
-            $table->boolean('is_active')->default(true);
-            $table->timestamps();
-            $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
-        });
+            Schema::create('announcements', function (Blueprint $table) {
+                $table->id();
+                $table->string('title');
+                $table->text('content');
+                $table->string('image')->nullable();
+                $table->string('type', 50)->default('info'); 
+                $table->boolean('is_active')->default(true);
+                $table->timestamps();
+                $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
+            });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('announcements');

@@ -14,6 +14,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Japanese Kare Ramen',
                 'price' => 36000,
+                'harga_diskon' => null,
                 'description' => 'Ramen berkuah kental, kari Jepang kaya rempah, dipadukan dengan mie kenyal, potongan daging Ayam lembut, telur rebus setengah matang, serta Daun Bawang Segar, dengan Nori.',
                 'image' => 'images/japanese_kare_ramen.jpeg',
                 'category' => 'Ramen',
@@ -24,6 +25,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Chicken Katsu Kare Rice',
                 'price' => 34000,
+                'harga_diskon' => null,
                 'description' => 'Chicken Katsu Kare Rice, ayam yang dimasak menggunakan bumbu kari Jepang, dengan potongan kentang dan wortel.',
                 'image' => 'images/chicken_katsu_kare_rice.jpeg',
                 'category' => 'Rice',
@@ -34,6 +36,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Tadaima Fried Rice',
                 'price' => 36000,
+                'harga_diskon' => null,
                 'description' => 'Tadaima Fried Rice, Nasi Goreng Khas Tadaima, berpadu dengan Chiken Katsu, Nori dan saus Teriyaki Ala Jepang dengan tambahan Andaliman.',
                 'image' => 'images/tadaima_fried_rice.jpeg',
                 'category' => 'Fried Rice',
@@ -44,6 +47,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Seafood Fried Rice',
                 'price' => 35000,
+                'harga_diskon' => null,
                 'description' => 'Seafood Fried Rice, disajikan dengan udang, fish cake, telur dan bakso ikan.',
                 'image' => 'images/seafood_fried_rice.jpeg',
                 'category' => 'Fried Rice',
@@ -54,6 +58,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Karegayaki Rice',
                 'price' => 32000,
+                'harga_diskon' => null,
                 'description' => 'Karegayaki Rice, ayam goreng tepung khas Jepang dengan saus teriyaki, irisan wortel, dan kaldu ayam.',
                 'image' => 'images/karegayaki_rice.jpeg',
                 'category' => 'Rice',
@@ -64,6 +69,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Chicken Fried Rice',
                 'price' => 34000,
+                'harga_diskon' => null,
                 'description' => 'Chicken Fried Rice, disajikan dengan potongan dada ayam yang lembut.',
                 'image' => 'images/chicken_fried_rice.jpeg',
                 'category' => 'Fried Rice',
@@ -74,6 +80,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Hokkaido Miso Ramen',
                 'price' => 34000,
+                'harga_diskon' => null,
                 'description' => 'Miso ramen menggunakan pasta kedelai fermentasi khas Jepang, chicken katsu, telur setengah matang, daun bawang dan nori.',
                 'image' => 'images/hokkaido_miso_ramen.jpeg',
                 'category' => 'Ramen',
@@ -84,6 +91,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Kampung Style Fried Rice',
                 'price' => 35000,
+                'harga_diskon' => null,
                 'description' => 'Kampung Style Fried Rice, disajikan dengan ikan teri, telur, kangkung, petai, bumbu andaliman dan terasi.',
                 'image' => 'images/kampung_style_fried_rice.jpeg',
                 'category' => 'Fried Rice',
@@ -94,6 +102,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Karage Dry Ramen',
                 'price' => 30000,
+                'harga_diskon' => null,
                 'description' => 'Karage Dry Ramen disajikan dengan potongan Dada Ayam lembut dan gurih, telur mata sapi, Nori dan daun bawang.',
                 'image' => 'images/karage_dry_ramen.jpeg',
                 'category' => 'Dry Ramen',
@@ -104,6 +113,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Kare Dry Ramen',
                 'price' => 30000,
+                'harga_diskon' => null,
                 'description' => 'Kare Dry Ramen disajikan dengan bumbu kari Jepang, telur mata sapi, Nori dan daun bawang.',
                 'image' => 'images/kare_dry_ramen.jpeg',
                 'category' => 'Dry Ramen',
@@ -114,6 +124,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Katsu Dry Ramen',
                 'price' => 28000,
+                'harga_diskon' => null,
                 'description' => 'Katsu Dry Ramen yang disajikan dengan toping Chicken Katsu, telur mata sapi, dan irisan Nori.',
                 'image' => 'images/katsu_dry_ramen.jpeg',
                 'category' => 'Dry Ramen',
@@ -124,6 +135,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Seafood Kare Rice',
                 'price' => 35000,
+                'harga_diskon' => null,
                 'description' => 'Seafood Kare Rice, disajikan dengan udang, fish cake, telur dan bakso ikan.',
                 'image' => 'images/seafood_kare_rice.jpeg',
                 'category' => 'Rice',
@@ -134,6 +146,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Tadaima Chicken Rice',
                 'price' => 36000,
+                'harga_diskon' => null,
                 'description' => 'Tadaima Chicken Rice, disajikan dengan sayur sawi dan wortel, Chicken Katsu, perpaduan saus teriyaki dan andaliman beserta kaldu ayam.',
                 'image' => 'images/tadaima_chicken_rice.jpeg',
                 'category' => 'Rice',
@@ -144,6 +157,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Tori Paitan Ramen',
                 'price' => 32000,
+                'harga_diskon' => null,
                 'description' => 'Tori Paitan Ramen dengan kaldu ayam yang direbus selama 6 jam, chicken katsu, telur setengah matang, daun bawang dan nori.',
                 'image' => 'images/tori_paitan_ramen.jpeg',
                 'category' => 'Ramen',
@@ -154,6 +168,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Fried Mantao',
                 'price' => 18000,
+                'harga_diskon' => null,
                 'description' => 'Fried Mantao, roti kukus yang digoreng dan disajikan dengan saus gula merah.',
                 'image' => 'images/fried_mantao.jpeg',
                 'category' => 'Snacks',
@@ -164,6 +179,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'French fries',
                 'price' => 16000,
+                'harga_diskon' => null,
                 'description' => 'Kentang goreng klasik potongan stik yang garing di luar namun lembut di dalam, sempurna sebagai camilan pendamping.',
                 'image' => 'images/french_fries.jpeg',
                 'category' => 'Snacks',
@@ -174,6 +190,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Prawn Tempura',
                 'price' => 18000,
+                'harga_diskon' => null,
                 'description' => 'Udang segar berbalut adonan tepung khas Jepang yang digoreng hingga renyah keemasan dan bertekstur ringan.',
                 'image' => 'images/prawn_tempura.jpeg',
                 'category' => 'Snacks',
@@ -184,6 +201,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => '2 Scoop Vanilla Ice Cream',
                 'price' => 12000,
+                'harga_diskon' => null,
                 'description' => 'Dua bola es krim vanila bertekstur lembut dan dingin yang memberikan sensasi manis menyegarkan sebagai penutup hidangan.',
                 'image' => 'images/2_scoop_vanilla_ice_cream.jpeg',
                 'category' => 'Dessert',
@@ -194,6 +212,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Fried Banana Choco Rice',
                 'price' => 27000,
+                'harga_diskon' => null,
                 'description' => 'Pisang Barangan Toba yang digoreng, ditambah parutan keju dan saus coklat yang ditaburi ceres.',
                 'image' => 'images/fried_banana_choco_rice.jpeg',
                 'category' => 'Dessert',
@@ -204,6 +223,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Grill Banana Cheese',
                 'price' => 27000,
+                'harga_diskon' => null,
                 'description' => 'Grill banana cheese, Pisang Kepok yang dipanggang lalu ditaburi parutan keju dan ceres diatasnya.',
                 'image' => 'images/grill_banana_cheese.jpeg',
                 'category' => 'Dessert',
@@ -214,6 +234,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Banana Split',
                 'price' => 16000,
+                'harga_diskon' => null,
                 'description' => 'Banana Split, perpaduan vanilla ice cream dan pisang barangan.',
                 'image' => 'images/banana_split.jpeg',
                 'category' => 'Dessert',
@@ -222,8 +243,20 @@ class MenuSeeder extends Seeder
                 'admin_id' => 1,
             ],
             [
+                'name' => 'Egg Fried Rice',
+                'price' => 22000,
+                'harga_diskon' => null,
+                'description' => 'Egg Fried Rice, Nasi Goreng dengan irisan Nori dan Telur.',
+                'image' => 'images/egg_fried_rice.jpeg',
+                'category' => 'Fried Rice',
+                'created_at' => now(),
+                'updated_at' => now(),
+                'admin_id' => 1,
+            ],
+            [
                 'name' => 'Sauted Broccoli',
                 'price' => 22000,
+                'harga_diskon' => null,
                 'description' => 'Broccoli segar yang ditumis, bertekstur renyah dan gurih.',
                 'image' => 'images/sauted_broccoli.jpeg',
                 'category' => 'Snacks',
@@ -234,6 +267,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Karage',
                 'price' => 24000,
+                'harga_diskon' => null,
                 'description' => 'Karage, potongan daging ayam yang dibalut dengan tepung, digoreng hingga renyah, dengan saus teriyaki.',
                 'image' => 'images/karage.jpeg',
                 'category' => 'Snacks',
@@ -244,6 +278,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Onigiri',
                 'price' => 22000,
+                'harga_diskon' => null,
                 'description' => 'Nasi kepal Jepang klasik dengan isian daging ayam gurih dan saus mayones lembut, dibalut dengan lembaran nori yang renyah.',
                 'image' => 'images/onigiri.jpeg',
                 'category' => 'Snacks',
@@ -254,6 +289,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Chicken Katsu',
                 'price' => 24000,
+                'harga_diskon' => null,
                 'description' => 'Fillet ayam empuk dengan balutan tepung roti yang digoreng hingga renyah keemasan, memberikan tekstur garing di luar dan tetap juicy di dalam.',
                 'image' => 'images/chicken_katsu.jpeg',
                 'category' => 'Snacks',
@@ -264,6 +300,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Onion Ring',
                 'price' => 18000,
+                'harga_diskon' => null,
                 'description' => 'Camilan renyah berupa irisan bawang bombay segar yang dibalut tepung bumbu krispi dan digoreng hingga matang sempurna dengan rasa gurih yang khas.',
                 'image' => 'images/onion_ring.jpeg',
                 'category' => 'Snacks',
@@ -274,6 +311,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Hot Cappuccino',
                 'price' => 20000,
+                'harga_diskon' => null,
                 'description' => 'Kopi espresso kustom dengan susu steamed lembut dan sentuhan latte art cantik yang menghangatkan suasana.',
                 'image' => 'images/1780580109.jpeg',
                 'category' => 'Drinks',
@@ -284,6 +322,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Orange Juice',
                 'price' => 18000,
+                'harga_diskon' => null,
                 'description' => 'Sari jeruk murni pilihan yang diperas langsung tanpa tambahan pemanis buatan untuk rasa manis-asam alami yang sehat dan menyegarkan.',
                 'image' => 'images/1780580132.jpeg',
                 'category' => 'Drinks',
@@ -294,6 +333,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Iced Strawberry Matcha Latte',
                 'price' => 28000,
+                'harga_diskon' => null,
                 'description' => 'Perpaduan estetik matcha premium Jepang, susu segar, dan lapisan stroberi manis di bagian bawah yang menyegarkan mata dan lidah.',
                 'image' => 'images/1780580154.jpeg',
                 'category' => 'Drinks',
@@ -304,6 +344,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Hot Ocha Tea',
                 'price' => 10000,
+                'harga_diskon' => null,
                 'description' => 'Teh hijau Jepang asli disajikan hangat yang menenangkan dan menjadi pendamping sempurna saat menikmati ramen.',
                 'image' => 'images/hot_ocha_tea.jpeg',
                 'category' => 'Drinks',
@@ -314,6 +355,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Narara',
                 'price' => 25000,
+                'harga_diskon' => null,
                 'description' => 'Kesegaran ganda dari campuran beri manis dan aroma serai autentik dalam sajian dingin yang membangkitkan semangat.',
                 'image' => 'images/narara.jpeg',
                 'category' => 'Drinks',
@@ -324,6 +366,7 @@ class MenuSeeder extends Seeder
             [
                 'name' => 'Matcha Milkshake',
                 'price' => 30000,
+                'harga_diskon' => null,
                 'description' => 'Smoothie kental dari bubuk matcha premium pilihan yang di-blend lembut untuk pencinta rasa teh hijau yang bold dan creamy.',
                 'image' => 'images/1780580177.jpeg',
                 'category' => 'Drinks',

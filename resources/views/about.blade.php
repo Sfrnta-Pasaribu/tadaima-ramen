@@ -50,63 +50,25 @@
     <section class="py-24 px-6 bg-zinc-950/30">
         <div class="max-w-4xl mx-auto text-center">
             <h3 class="text-red-600 font-bold uppercase tracking-widest text-sm mb-4">Dedikasi & Kualitas</h3>
-            <h2 class="text-4xl font-black uppercase mb-10 italic">Dibuat Dengan <span class="text-red-600">Presisi</span></h2>
+            <h2 class="text-4xl font-black uppercase mb-10 italic">Dibuat Dengan <span class="text-red-600">Sepenuh Hati<i class="fas fa-hand-point-right"></i></span></h2>
             <p class="text-gray-400 text-lg leading-relaxed mb-12 italic">
                 "Kami tidak percaya pada jalan pintas. Rasa yang jujur membutuhkan waktu, kesabaran, dan bahan-bahan terbaik yang bisa diberikan oleh alam."
             </p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="p-8 bg-[#0f0f0f] border border-zinc-800 rounded-2xl hover:border-red-600 transition-colors group">
                     <div class="text-4xl mb-6 text-red-600 group-hover:scale-110 transition-transform">🍜</div>
-                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Artisan Noodles</h4>
+                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Mie Otentik</h4>
                     <p class="text-gray-500 text-sm">Mie yang dibuat segar setiap pagi dengan teknik tradisional untuk tekstur kenyal yang sempurna.</p>
                 </div>
                 <div class="p-8 bg-[#0f0f0f] border border-zinc-800 rounded-2xl hover:border-red-600 transition-colors group">
                     <div class="text-4xl mb-6 text-red-600 group-hover:scale-110 transition-transform">🔥</div>
-                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Umami Broth</h4>
+                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Kaldu Kaya Rasa</h4>
                     <p class="text-gray-500 text-sm">Kaldu yang dimasak perlahan selama 12 jam untuk mengekstraksi setiap tetes kemurnian rasa.</p>
                 </div>
                 <div class="p-8 bg-[#0f0f0f] border border-zinc-800 rounded-2xl hover:border-red-600 transition-colors group">
                     <div class="text-4xl mb-6 text-red-600 group-hover:scale-110 transition-transform">🌿</div>
-                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Pure Ingredients</h4>
+                    <h4 class="text-lg font-bold uppercase mb-4 tracking-widest text-white">Bahan Alami</h4>
                     <p class="text-gray-500 text-sm">Tanpa MSG berlebih, tanpa pengawet. Hanya bahan segar dari petani lokal yang kami percaya.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-4xl font-black uppercase mb-4 italic">
-                Web Ini Dibuat Oleh 
-            </h2>
-            <p class="text-gray-500 mb-16 text-sm tracking-widest uppercase font-bold">Kelompok 13 PA-1 • Angkatan 2025</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-center">
-                <div class="group max-w-[240px] mx-auto">
-                    <div class="relative overflow-hidden rounded-full aspect-square mb-6 border-2 border-zinc-800 group-hover:border-red-600 transition-all duration-500 p-2">
-                        <img src="{{ asset('images/team/sofranta.jpeg') }}" class="w-full h-full object-cover rounded-full transition-all duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
-                    </div>
-                    <h5 class="text-lg font-bold uppercase tracking-widest text-white">Sofranta Pasaribu</h5>
-                    <p class="text-red-600 text-[10px] font-black mt-2 uppercase tracking-[0.3em]">Project Leader / Backend</p>
-                </div>
-
-                <div class="group max-w-[240px] mx-auto">
-                    <div class="relative overflow-hidden rounded-full aspect-square mb-6 border-2 border-zinc-800 group-hover:border-red-600 transition-all duration-500 p-2">
-                        <img src="{{ asset('images/team/gabriel.jpeg') }}" class="w-full h-full object-cover rounded-full transition-all duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
-                    </div>
-                    <h5 class="text-lg font-bold uppercase tracking-widest text-white">Gabriel Pangaribuan</h5>
-                    <p class="text-red-600 text-[10px] font-black mt-2 uppercase tracking-[0.3em]">Frontend Developer</p>
-                </div>
-
-                <div class="group max-w-[240px] mx-auto">
-                    <div class="relative overflow-hidden rounded-full aspect-square mb-6 border-2 border-zinc-800 group-hover:border-red-600 transition-all duration-500 p-2">
-                        <img src="{{ asset('images/team/ruth.jpeg') }}" class="w-full h-full object-cover rounded-full transition-all duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-full"></div>
-                    </div>
-                    <h5 class="text-lg font-bold uppercase tracking-widest text-white">Ruth Panggabean</h5>
-                    <p class="text-red-600 text-[10px] font-black mt-2 uppercase tracking-[0.3em]">UI/UX Designer</p>
                 </div>
             </div>
         </div>

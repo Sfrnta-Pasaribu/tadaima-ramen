@@ -1,5 +1,9 @@
-<x-app-layout>
-    <div class="py-12">
+@extends('layouts.admin')
+@section('title', 'Kelola Menu')
+@section('header_title', 'Manajemen Foto galeri')
+@section('content')
+
+<div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             
             <!-- Notifikasi Berhasil -->
@@ -78,4 +82,5 @@
 
         </div>
     </div>
-</x-app-layout>
+
+@endsection

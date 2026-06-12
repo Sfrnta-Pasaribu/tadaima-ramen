@@ -15,6 +15,7 @@ class Menu extends Model
         'name',
         'description',
         'price',
+        'harga_diskon',
         'category',
         'image'
     ];

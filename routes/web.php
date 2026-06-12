@@ -13,7 +13,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/menu', [HomeController::class, 'menu'])->name('menu');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
-// 👇 BARU: Menambahkan rute fasilitas di jalur publik
 Route::get('/fasilitas', [HomeController::class, 'fasilitas'])->name('fasilitas'); 
 
 // --- 2. Route Khusus Admin (Harus Login) ---

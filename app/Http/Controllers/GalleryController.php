@@ -36,7 +36,6 @@ class GalleryController extends Controller
         $imageFile = $request->file('image');
         $imageName = time() . '_' . $imageFile->getClientOriginalName();
         
-        // 👇 PERBAIKAN 1: Pindah file ke dalam sub-folder public/images/gallery
         $imageFile->move(public_path('images/gallery'), $imageName);
 
         // Simpan catatan ke database

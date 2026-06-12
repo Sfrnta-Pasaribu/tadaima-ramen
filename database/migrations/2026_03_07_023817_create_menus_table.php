@@ -10,17 +10,19 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-{
-    Schema::create('menus', function (Blueprint $table) {
-        $table->id();
-        $table->string('name');         // Nama Ramen (contoh: Shio Ramen)
-        $table->integer('price');       // Harga (contoh: 35000)
-        $table->text('description');    // Penjelasan singkat menu
-        $table->string('image')->nullable(); // Link gambar (opsional)
-        $table->timestamps();           // Mencatat waktu dibuat/diubah
-        $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
-    });
-}
+    {
+        Schema::create('menus', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');           // Nama Ramen
+            $table->integer('price');         // Harga Asli
+            $table->integer('harga_diskon')->nullable(); // Harga Promo/Diskon (Bisa kosong)
+            $table->text('description');      // Penjelasan singkat menu
+            $table->string('category');       // Kolom kategori
+            $table->string('image')->nullable(); // Link gambar
+            $table->timestamps();             // Waktu dibuat/diubah
+            $table->foreignId('admin_id')->constrained('admin')->cascadeOnDelete();
+        });
+    }
 
     /**
      * Reverse the migrations.

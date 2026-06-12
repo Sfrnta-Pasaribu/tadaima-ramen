@@ -23,7 +23,7 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             
-            <nav x-data="{ open: false }" class="fixed w-full z-50 bg-transparent">
+            <nav x-data="{ open: false }" class="sticky top-0 w-full z-50 bg-black">
                 <div class="container mx-auto px-6 py-4">
                     <div class="flex items-center justify-between">
                         
@@ -34,8 +34,8 @@
                         <div class="hidden md:flex items-center justify-center flex-1 gap-10 text-xs font-bold uppercase tracking-[0.2em]">
                             <a href="{{ route('home') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('home') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Beranda</a>
                             <a href="{{ route('menu') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('menu') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Menu</a>
-                            <a href="/about" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('about') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">About</a>
-                            <a href="/gallery" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('gallery') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Gallery</a>
+                            <a href="/about" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('about') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Tentang</a>
+                            <a href="/gallery" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->is('gallery') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Galeri</a>
                             <a href="{{ route('fasilitas') }}" class="py-1 transition-all duration-300 drop-shadow-md {{ request()->routeIs('fasilitas') ? 'text-red-600 border-b-2 border-red-600' : 'text-white hover:text-red-600' }}">Fasilitas</a>
                         </div>
 
@@ -43,11 +43,7 @@
                             
                             <div class="hidden md:flex items-center space-x-4">
                                 @auth
-                                    <a href="{{ route('dashboard') }}" class="text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition drop-shadow-md">Dashboard</a>
-                                    <form method="POST" action="{{ route('logout') }}" class="inline">
-                                        @csrf
-                                        <button type="submit" class="text-[10px] font-bold uppercase tracking-widest text-gray-200 hover:text-red-600 drop-shadow-md">Logout</button>
-                                    </form>
+                                    <a href="{{ route('dashboard') }}" class="text-[10px] font-bold uppercase tracking-widest text-red-500 border border-red-500 px-3 py-1 rounded-full hover:bg-red-500 hover:text-white transition drop-shadow-md">Dasbor</a>
                                 @else
                                     <a href="{{ route('login') }}" class="text-[10px] font-bold uppercase tracking-widest text-white bg-red-600 px-5 py-2 rounded-full hover:bg-red-700 transition shadow-md">Login</a>
                                 @endauth
@@ -66,8 +62,8 @@
                 <div x-show="open" x-transition class="md:hidden bg-black/95 absolute top-full left-0 w-full p-6 space-y-4 text-center border-t border-white/10 shadow-2xl">
                     <a href="{{ route('home') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('home') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Beranda</a>
                     <a href="{{ route('menu') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('menu') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Menu</a>
-                    <a href="/about" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('about') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">About</a>
-                    <a href="/gallery" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('gallery') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Gallery</a>
+                    <a href="/about" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('about') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Tentang</a>
+                    <a href="/gallery" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->is('gallery') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Galeri</a>
                     <a href="{{ route('fasilitas') }}" class="block font-bold tracking-[0.2em] uppercase text-sm transition-colors {{ request()->routeIs('fasilitas') ? 'text-red-600' : 'text-gray-200 hover:text-white' }}">Fasilitas</a>
                     
                     <div class="pt-6 mt-4 border-t border-white/20">
@@ -84,8 +80,7 @@
                 </div>
             </nav>
 
-            <main>
-                @if(isset($slot))
+            <main> @if(isset($slot))
                     {{ $slot }}
                 @else
                     @yield('content')

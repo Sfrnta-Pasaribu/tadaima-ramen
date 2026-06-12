@@ -1,9 +1,7 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Pengaturan Akun') }}
-        </h2>
-    </x-slot>
+@extends('layouts.admin')
+@section('title', 'Kelola Menu')
+@section('header_title', 'Manajemen Daftar Menu')
+@section('content')
 
     <div class="pt-32 pb-14">
         <div class="max-w-3xl mx-auto sm:px-6 lg:px-8 space-y-8">
@@ -22,4 +20,5 @@
 
         </div>
     </div>
-</x-app-layout>
+
+@endsection
